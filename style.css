@@ -1,3 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+     background-image: url(./assets/world.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: top center;
+    }
+
+    body * {
+        font-family: 'Inter', sans-serif;
+        color: white;
+    }
+
 #conteiner {
+    
+    width: 600px;
+    
+    border: solid red;
+    margin: auto;
+}
+
+    #profile {
+        text-align: center;
+    }
+
+#profile img {
+    justify-content: center;
+    width: 170px;
+    
+}
+
+#profile p {
+    font-size: 500;
+    line-height: 40px;
+    border: solid;
+}
+
+#uul  {
+    text-align: center;
+}
+
+#ul {
+    
+    border: solid red;
     
 }
