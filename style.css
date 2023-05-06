@@ -18,11 +18,10 @@ body {
     }
 
 #conteiner {
-    
     width: 600px;
     
-    border: solid red;
-    margin: auto;
+   padding: 50px;
+    margin: 56px auto 0px;
 }
 
     #profile {
@@ -32,21 +31,72 @@ body {
 #profile img {
     justify-content: center;
     width: 170px;
+    padding: 8px;
     
 }
 
 #profile p {
     font-size: 500;
     line-height: 40px;
-    border: solid;
+    padding: 8px;
 }
 
-#uul  {
-    text-align: center;
+
+
+ul {
+    
+    
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-#ul {
-    
-    border: solid red;
-    
+ul li a{
+    padding: 27px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 60px;   
+
+   background-color: rgba(0, 0, 0, 0.491);
+   border: 1px solid rgb(122, 122, 122);
+   border-radius: 8px;
+   backdrop-filter: blur(4px);
+text-decoration: none;
+font-weight: 500;
+}
+
+ul li a:hover {
+    background: rgba(0, 0, 0, 0.895);
+    border: 1px solid rgb(255, 255, 255);
+    transition: background 0.3s;
+}
+
+#social-links {
+    display: flex;
+    padding: 24px;
+    justify-content: center;
+    font-size: 34px;
+}
+
+#social-links a {
+   
+    padding: 50px;
+
+}
+
+#social-links :hover {
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+}
+
+:root {
+    --bg-button: rgba(0, 0, 0, 0.491);
+    --bg-border: rgb(255, 255, 255);
+}
+
+.claro {
+    --bg-button: rgba(63, 57, 57, 0.438);
+    --bg-border: rgb(0, 0, 0);
 }
