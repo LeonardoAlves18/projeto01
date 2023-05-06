@@ -6,7 +6,7 @@
 
 
 body {
-     background-image: url(./assets/ThemeDark.jpg);
+     background-image: var(--bg-modo);
      background-repeat: no-repeat;
      background-size: cover;
      background-position: top center;
@@ -14,7 +14,7 @@ body {
 
     body * {
         font-family: 'Inter', sans-serif;
-        color: white;
+        color: var(--text-color);
     }
 
 #conteiner {
@@ -25,6 +25,28 @@ body {
 
     #profile {
         text-align: center;
+    }
+
+    :root {
+        --img-modo: url(./assets/Ellipse.png);
+        --text-color:rgb(255, 255, 255);
+        --bg-modo:    url(./assets/ThemeDark.jpg);
+        --br-modo:  rgba(255, 255, 255, 0.56);
+        --bg-fund:  rgba(88, 83, 83, 0.78);
+        --bg-hover: rgba(58, 56, 56, 0.533);
+        --br-hover: rgba(233, 217, 217, 0.993); 
+        --sc-links: rgba(88, 83, 83, 0.78);
+    }
+
+    .claro {
+        --img-modo: url(./assets/terno.jpg);
+        --text-color: rgb(0, 0, 0);
+        --bg-modo:    url(./assets/Themeclaro.jpg);
+        --br-modo:  rgba(0, 0, 0, 0.644);  
+        --br-hover: rgb(0, 0, 0); 
+        --bg-fund: rgb(145, 130, 130);
+        --bg-hover: rgba(86, 84, 84, 0.843);
+        --sc-links: rgba(86, 84, 84, 0.843);
     }
 
 #profile img {
@@ -40,24 +62,37 @@ body {
     padding: 8px;
 }
 
+#switch {    
+position: relative;
+width: 55px;
+margin: 8px auto;
+}
+
  #switch button{
-    height: 24px;
-    width: 24px;
+    height: 30px;
+    width: 27px;
     background: rgb(107, 101, 101) url(./assets/moon-stars.svg) no-repeat center;
     border-radius: 50%;
     border: 0;
+
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    z-index: 1;
+    transform: translateY(-50%);
 }
 
 #switch span { 
     display: block;
-    width: 48px;
-    height: 24px;
-    background: rgb(42, 41, 40);
-    border: solid rgb(122, 122, 122);
+    width: 55px;
+    height: 26px;
+    background: var(--bg-fund);
+    border: solid var(--bg-modo);
     height: 24px;
     border: 1px solid rgb(20, 20, 20);
     border-radius: 9999px;
     backdrop-filter: blur(4px);
+    --webkit-backdrop-filter: blur(4px);
 }
 
 
@@ -79,8 +114,8 @@ ul li a{
    align-items: center;
    height: 60px;   
 
-   background-color: rgba(0, 0, 0, 0.491);
-   border: 1px solid rgb(122, 122, 122);
+   background: var(--bg-fund);
+   border: 2px solid var(--br-modo);
    border-radius: 8px;
    backdrop-filter: blur(4px);
    text-decoration: none;
@@ -88,8 +123,8 @@ ul li a{
 }
 
 ul li a:hover {
-    background: rgba(0, 0, 0, 0.895);
-    border: 1px solid rgb(255, 255, 255);
+    background: var(--bg-hover);
+    border: 2px solid var(--br-hover);
     transition: background 0.3s;
 }
 
@@ -112,7 +147,7 @@ ul li a:hover {
 
 }
 #social-links a:hover {
-    background-color: rgb(3, 2, 2);
+    background-color: var(--sc-links);
 }
 
  footer {
@@ -120,13 +155,3 @@ ul li a:hover {
     text-align: center;
     font-size: 16px;
  }
-
-:root {
-    --bg-button: rgba(0, 0, 0, 0.491);
-    --bg-border: rgb(255, 255, 255);
-}
-
-.claro {
-    --bg-button: rgba(63, 57, 57, 0.438);
-    --bg-border: rgb(0, 0, 0);
-}
