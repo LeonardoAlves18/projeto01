@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: background, 0.3s;
 }
 
 
@@ -77,9 +78,19 @@ margin: 8px auto;
 
     position: absolute;
     top: 50%;
-    right: 0px;
+    left: 0px;
     z-index: 1;
     transform: translateY(-50%);
+
+    animation: slide-off 0.4s;
+}
+
+.claro #switch button {
+    animation: slide-on 0.4s forwards;
+}
+
+#switch button:hover {
+    outline: 6px solid var(--bg-hover);
 }
 
 #switch span { 
@@ -155,3 +166,28 @@ ul li a:hover {
     text-align: center;
     font-size: 16px;
  }
+
+
+ /* animaçao*/
+
+ @keyframes slide-on {
+
+    from {
+     left: 0;
+    }
+to {
+left: 50%;
+}
+ }
+
+ @keyframes slide-off {
+
+from {
+     left: 50%;
+}
+
+to{
+left: 0;
+}
+
+}
